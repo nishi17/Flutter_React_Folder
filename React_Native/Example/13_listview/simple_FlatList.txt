@@ -1,0 +1,43 @@
+import React, { Component } from "react";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+
+export default class PizzaTranslator extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <FlatList
+          data={[
+            { key: "nishi" },
+            { key: "karan" },
+            { key: "kunj" },
+            { key: "aanal" },
+            { key: "mehul" },
+            { key: "monika" },
+            { key: "nila" },
+            { key: "rameshchandra" },
+            { key: "dhyani" },
+            { key: "hiral" },
+            { key: "ankit" },
+            { key: "joy" },
+            { key: "mohini" },
+            { key: "ruppa" },
+            { key: "snhehal" }
+          ]}
+
+renderItem = {({item}) => <Text style={styles.item}> {item.key} </Text>  }/>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44
+  }
+});

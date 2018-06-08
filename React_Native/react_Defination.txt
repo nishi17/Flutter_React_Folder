@@ -1,0 +1,10 @@
+just know JavaScript, some native UI elements, platform APIs, 
+and any other platform-specific design patterns and you’re good to go. 
+Also included in React Native’s library are Flexbox CSS styling, inline styling, 
+debugging, and support deploying to either the App Store or Google Play.
+
+
+
+Under React Native’s hood is Facebook’s popular ReactJS UI library for web applications. 
+React Native brings all of ReactJS’s better app performance, DOM abstraction, 
+and simplified programming methods to hybrid mobile development

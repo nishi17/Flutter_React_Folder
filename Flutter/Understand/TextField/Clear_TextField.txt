@@ -1,0 +1,37 @@
+  final TextEditingController _controller = new TextEditingController();
+
+
+
+ @override
+  Widget build(BuildContext context) {
+
+
+ TextField(
+            key: _inputKey,
+            controller: _controller,
+
+}
+
+
+@override
+  void didUpdateWidget(UnitConverter old) {
+
+    super.didUpdateWidget(old);
+    // We update our [DropdownMenuItem] units when we switch [Categories].
+    if (old.category != widget.category) {
+      _setDefaults();
+    }
+
+  }
+
+
+
+
+ void _setDefaults() {
+
+    setState(() {
+      _controller.clear();
+     
+    });
+
+  }

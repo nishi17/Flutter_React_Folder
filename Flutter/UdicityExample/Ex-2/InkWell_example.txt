@@ -1,0 +1,64 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: ' Hello',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Hello Rectangle'),
+        ),
+        body: HelloRectangle(),
+      ),
+    ),
+  );
+}
+
+const _rowheight = 155.0;
+BorderRadius _borderRadius = new BorderRadius.all(const Radius.circular(8.0));
+
+class HelloRectangle extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+  assert(debugCheckHasMaterial(context));
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        height: _rowheight,
+        padding: EdgeInsets.all(25.0),
+        child: InkWell(
+          borderRadius: _borderRadius,
+          highlightColor: Colors.pink[50],
+          splashColor: Colors.pink[100],
+          onTap: () {
+            print("i was tapped");
+          },
+          child: Padding(
+            padding: EdgeInsets.lerp(EdgeInsets.all(20.0), EdgeInsets.all(5.0), 10.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                ),
+                Center(
+                  child: Text('hello nishi',
+                      textAlign: TextAlign.center,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .display1
+                          .apply(color: Colors.black)),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

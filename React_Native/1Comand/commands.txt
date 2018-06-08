@@ -1,0 +1,8 @@
+******* Create PRoject in react native
+
+react-native init AwesomeProject
+
+******* Run the project
+
+cd AwesomeProject
+react-native run-android

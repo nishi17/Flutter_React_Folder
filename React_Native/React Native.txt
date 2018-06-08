@@ -1,0 +1,33 @@
+React Native
+
+offical Document Link
+
+https://facebook.github.io/react-native/docs/getting-started.html
+
+https://reactjs.org
+
+https://facebook.github.io/react-native/
+
+
+DIffrence beetween React Native and Native App development
+
+https://stormotion.io/blog/react-native-vs-native-ios-android-app-development-comparison/
+
+
+
+Issues in Hybrid mobile app developmnet
+
+https://support.smartbear.com/testcomplete/docs/app-testing/mobile/hybrid/possible-issues.html
+
+
+
+
+Demo onee example in explaination
+
+
+https://snack.expo.io/BJ-uC-nrb
+
+
+React Native Crash Course
+
+https://www.youtube.com/watch?v=mkualZPRZCs

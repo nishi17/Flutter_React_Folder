@@ -1,0 +1,9 @@
+
+    double a = MediaQuery.of(context).viewInsets.bottom;
+
+    if (a >= 200.0) {
+      print('hello  $a');
+      FocusScope.of(context).requestFocus(new FocusNode());
+      _controller.fling(
+          velocity: _backdropPanelVisible ? -_kFlingVelocity : _kFlingVelocity);
+    }

@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_app/category.dart';
+
+const _categoryName = 'cake';
+const _categotyIcon = Icons.cake;
+const _categorycolors = Colors.green;
+
+void main() {
+  runApp(UnitConverterApp());
+}
+
+class UnitConverterApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Unit Converter',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Example - 3'),
+        ),
+        backgroundColor: Colors.green[100],
+        body: Center(
+          child: Category(
+            name: _categoryName,
+            color: _categorycolors,
+            iconLocation: _categotyIcon,
+          ),
+        ),
+      ),
+    );
+  }
+}

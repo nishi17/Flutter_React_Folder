@@ -1,0 +1,37 @@
+https://reactnativecode.com/get-image-from-local-resource
+
+
+
+
+
+import React, { Component } from "react";
+import { Image, View } from "react-native";
+
+export default class TextInANest extends Component {
+  render() {
+    return (
+      <View>
+        <Image
+          source={require("./images/screen.png")}
+          style={{ height: 100, width: 350, resizeMode: "stretch" }}
+        />
+
+        <Image
+          style={{ width: 50, height: 50 }}
+          source={{
+            uri:
+              "https://facebook.github.io/react-native/docs/assets/favicon.png"
+          }}
+        />
+        <Image
+          style={{ width: 66, height: 58 }}
+          source={{
+            uri:
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=="
+          }}
+        />
+      </View>
+    );
+  }
+}
+

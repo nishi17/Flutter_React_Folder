@@ -1,0 +1,54 @@
+Link for Gesture Responder System
+
+https://facebook.github.io/react-native/docs/gesture-responder-system.html
+
+import React, { Component } from "react";
+import { StyleSheet, Button, Alert, View } from "react-native";
+
+export default class PizzaTranslator extends Component {
+  _onPressButtom() {
+    Alert.alert("You tapped the  button . !");
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.buttonContainer}>
+
+          <Button onPress={this._onPressButtom} title="Press ME .. !" />
+
+        </View>
+
+        <View style={styles.buttonContainer}>
+
+          <Button onPress={this._onPressButtom} title="Press Me" color="#841584" />
+
+        </View>
+
+        <View style={styles.alternativeLayoutButtonContainer}>
+
+          <Button onPress={this._onPressButtom} title="This looks great!" />
+
+          <Button onPress={this._onPressButtom} title="OK!" color="#841584" />
+
+        </View>
+
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  buttonContainer: {
+    margin: 20
+  },
+  alternativeLayoutButtonContainer: {
+    margin: 20,
+    flexDirection: "row",
+    justifyContent: "space-between"
+  }
+});

@@ -1,0 +1,102 @@
+
+DATE ------   14-5- 2018
+
+https://flutter.io/get-started/install/    size: 60.0,
+https://reactjs.org/
+https://www.youtube.com/watch?v=8pJ7lJNiGkA
+https://www.youtube.com/watch?v=hA0hrpR-o8U
+https://www.youtube.com/watch?v=RS36gBEp8OI
+https://codelabs.developers.google.com/codelabs/flutter/#0
+https://www.dartlang.org/guides/get-started
+
+
+
+DATE ------    15-5- 2018
+
+Flutter for Android Developers
+https://flutter.io/flutter-for-android/
+
+
+
+Fluteer installtion steps
+
+https://www.youtube.com/watch?v=BDRQxfWrozY
+
+DATE ------    16-5-2018
+
+for ios flutter run app
+
+https://stackoverflow.com/questions/49001690/install-flutter-app-developed-using-android-studio-on-iphone
+
+steps for ios on windows
+
+https://techsviewer.com/install-macos-high-sierra-virtualbox-windows/
+
+
+Flutter's Rendering Pipeline
+
+https://www.youtube.com/watch?v=UUfXWzp0-DU
+
+Flutter engine
+
+https://github.com/flutter/engine/wiki
+
+
+
+DATE ------    17-5-2018
+
+Fltter's hot relaod
+https://flutter.io/hot-reload/
+
+
+Flutter Inspector && Observatory: A Profiler for Dart Apps
+https://dart-lang.github.io/observatory/
+
+
+Effective Dart: Style
+https://www.dartlang.org/guides/language/effective-dart/style
+
+
+Widgets Catalog
+https://flutter.io/widgets/
+
+
+DATE ------    21-5-2018
+
+
+BorderRadius type example 
+https://github.com/flutter/flutter/issues/7659
+
+
+example of exercise
+https://github.com/flutter/udacity-course/blob/master/course/02_category_widget/task_02_category_widget/lib/main.dart
+
+
+DATE ------    22-5-2018
+
+
+example 	of listview
+
+https://blog.geekyants.com/flutter-hands-on-building-a-news-app-fe233027185f
+https://hackernoon.com/flutter-iii-lists-and-items-6bfa7348ab1b
+https://www.raywenderlich.com/188257/getting-started-with-flutter
+
+
+DATE ------    23-5-2018
+
+
+add images in flutter
+
+https://flutter.io/assets-and-images/
+
+
+navigator widget example one screen to second screen in listview
+
+https://github.com/flutter/udacity-course/tree/master/course/04_navigation/solution_04_navigation/lib
+
+
+
+udicity lesson 2
+https://classroom.udacity.com/courses/ud905/lessons/34b4084a-8d2c-4096-a5fc-2bcf0721a7d4/concepts/cd5923d4-d8d9-47c1-8b1a-68feab8d523e
+
+

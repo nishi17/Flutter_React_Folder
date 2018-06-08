@@ -1,0 +1,74 @@
+14-05-2018
+
+https://facebook.github.io/react-native/
+https://www.youtube.com/watch?v=mkualZPRZCs
+https://www.google.com/search?q=how+to+install+react+native+on+windows&ie=utf-8&oe=utf-8&client=firefox-b
+https://github.com/react-native-material-design/demo-app
+https://reactjs.org/docs/hello-world.html
+https://stormotion.io/blog/react-native-vs-native-ios-android-app-development-comparison/#react-and-native-who-is-the-winner
+https://facebook.github.io/react-native/
+
+
+  *********************           4-6-2018            **********************************
+
+React five key concepts Details
+
+https://medium.freecodecamp.org/the-5-things-you-need-to-know-to-understand-react-a1dbd5d114a3
+
+Web bos Blog for learn
+https://wesbos.com/
+
+
+Bind the constructor in componet API
+https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
+
+
+  *********************           5-6-2018                   ********************************** 
+  
+
+Document link dor SETSTATE
+
+https://reactjs.org/docs/react-component.html#setstate
+
+Link for Diff colors
+
+https://facebook.github.io/react-native/docs/colors.html
+
+Layout Props 
+
+https://facebook.github.io/react-native/docs/layout-props.html
+
+
+TextInput
+https://facebook.github.io/react-native/docs/textinput.html
+
+
+  *********************           6-6-2018                   ********************************** 
+ 
+reasponder system for TOUCh 
+  https://facebook.github.io/react-native/docs/gesture-responder-system.html
+  
+  
+  ViewPager
+  
+  https://facebook.github.io/react-native/docs/viewpagerandroid.html
+  
+  
+  Fetch API
+  https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+  https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+  
+    *********************           7-6-2018                   ********************************** 
+
+  
+   For Iphone Fetch Data from secure lavel is compulsary
+  https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#test-your-integration
+  
+  
+  
+  XMLHttpRequest API 
+  https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+  
+  
+  
+  
