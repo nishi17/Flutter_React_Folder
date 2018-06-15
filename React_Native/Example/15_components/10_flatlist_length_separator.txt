@@ -1,0 +1,138 @@
+import React, { Component } from "react";
+import {
+  AppRegistry,
+  FlatList,
+  Text,
+  TouchableHighlight,
+  View,
+  ActivityIndicator,
+  StyleSheet
+} from "react-native";
+
+
+
+const data = [
+  { title: "Title Text 0", key: "item1" },
+  { title: "Title Text 1", key: "item2" },
+  { title: "Title Text2", key: "item3" },
+  { title: "Title Text3", key: "item4" },
+  { title: "Title Text4", key: "item5" },
+  { title: "Title Text5", key: "item6" },
+  { title: "Title Text6", key: "item7" }
+]
+
+export default class UselessText extends Component {
+  constructor(props) {
+    super(props);
+    this.viewabilityConfig = {
+      waitForInteraction: true,
+      viewAreaCoveragePercentThreshold: 100
+  }
+  }
+
+  _onPress(item) {
+    alert(item.key);
+  }
+
+  renderSeparator = () => {
+    return (
+      <View
+        style={{
+          height: 2,
+          width: "100%",
+          backgroundColor: "#CED0CE"
+        }}
+      />
+    );
+  };
+
+  Render_FlatList_Sticky_header = () => {
+    var Sticky_header_View = (
+      <View style={styles.header_style}>
+        <Text style={{ textAlign: "center", color: "#fff", fontSize: 22 }}>
+          {" "}
+          FlatList Sticky Header{" "}
+        </Text>
+      </View>
+    );
+
+    return Sticky_header_View;
+  };
+
+   _keyExtractor = (item, index) => item.length;
+
+  getItemLayout = (data, index) => ({
+    length: 550,
+    offset: 550 * index,
+    index
+  });
+
+  render() {
+
+    var intDataOflength = data.length - 1;
+    //  var a = this._keyExtractor
+    console.warn( "length of data    "  +intDataOflength);
+    return (
+      <FlatList
+
+
+        data={data}
+        ItemSeparatorComponent={this.renderSeparator}
+        ListEmptyComponent={() => {
+          return (
+            <View>
+              <Text>Nothing found</Text>
+            </View>
+          );
+        }}
+        ListFooterComponent={() => {
+          return (
+            <View style={{ flex: 1, padding: 10 }}>
+              <ActivityIndicator size="small" />
+            </View>
+          );
+        }}
+        ListHeaderComponent={this.Render_FlatList_Sticky_header}
+        // columnWrapperStyle={{ marginTop: 100 }} it is not supported for single column lists
+
+        getItemLayout={this.getItemLayout}
+        //  horizontal ={true}
+
+        initialNumToRender={2}
+
+        keyExtractor={this._keyExtractor}
+         initialScrollIndex={intDataOflength}
+
+        // inverted= {true}
+
+        viewabilityConfig={this.viewabilityConfig}
+
+        renderItem={({ item, separators }) => (
+
+          <TouchableHighlight
+            onPress={() => this._onPress(item)}
+            onShowUnderlay={separators.highlight}
+            onHideUnderlay={separators.unhighlight}
+          >
+            <View style={{ backgroundColor: "white" }}>
+              <Text style={{ fontSize: 90 }}>{item.title}</Text>
+            </View>
+          </TouchableHighlight>
+        )}
+      />
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  header_style: {
+    width: "100%",
+    height: 45,
+    backgroundColor: "#00BCD4",
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => UselessText);

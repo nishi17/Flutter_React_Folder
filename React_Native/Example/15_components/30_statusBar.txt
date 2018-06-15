@@ -1,0 +1,38 @@
+import React, { Component } from "react";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  StatusBar
+} from "react-native";
+
+export default class PizzaTranslator extends Component {
+  render() {
+    return (
+      <View style={styles.MainContainer}>
+        <StatusBar
+          animated={true}
+          backgroundColor="blue"
+          barStyle="dark-content"
+         // hidden={true}
+          translucent={true}
+          networkActivityIndicatorVisible = {true}
+        />
+
+          <Text style={{textAlign : 'center', fontSize: 25}}> React Native Status Bar Example Tutorial </Text>
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+ 
+  MainContainer :{
+   
+  justifyContent: 'center',
+  flex:1,
+  marginTop: (Platform.OS == 'ios') ? 20 : 0
+   
+  }
+   
+  });

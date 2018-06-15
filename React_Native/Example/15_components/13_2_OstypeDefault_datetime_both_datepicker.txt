@@ -1,0 +1,50 @@
+import React, { Component } from "react";
+import { AppRegistry, View, Text } from "react-native";
+import DatePicker from "react-native-datepicker";
+
+export default class UselessText extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: "" }; // if you write date in this then you can not see placeholder text
+  }
+
+  render() {
+    return (
+      <View>
+        
+        <DatePicker
+          style={{ width: 200 }}
+          date={this.state.date}
+          mode="datetime"
+          placeholder="select date"
+          format="DD-MM-YYYY HH:mm"
+          minDate="01-06-2018 00:00"
+          maxDate="01-09-2018 24:00"
+          confirmBtnText="Confirm"
+          cancelBtnText="Cancel"
+          customStyles={{
+            dateIcon: {
+              position: "absolute",
+              left: 0,
+              top: 4,
+              marginLeft: 0
+            },
+            dateInput: {
+              marginLeft: 36
+            }
+            // ... You can check the source to find the other keys.
+          }}
+          onDateChange={date => {
+            this.setState({ date: date });
+          }}
+        />
+
+        <Text style={{ fontSize: 30 }}>selected date is {this.state.date}</Text>
+
+      </View>
+    );
+  }
+}
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => UselessText);

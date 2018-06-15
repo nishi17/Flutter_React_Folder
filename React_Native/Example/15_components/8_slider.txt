@@ -1,0 +1,51 @@
+import React, { Component } from "react";
+import {
+  AppRegistry,
+  View,
+  Text,
+  Slider
+} from "react-native";
+
+export default class UselessText extends Component {
+
+
+  constructor(props) {
+    super(props)
+    this.state = { age: 18 }
+   } 
+   getVal(val){
+    console.warn(val);
+    } 
+ 
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+    
+
+<Text style={{ margin: 10, fontSize: 20 , alignContent: 'center', }}>
+          you select {this.state.age}
+        </Text>
+
+
+        <Slider
+          style={{ width: 300 }}
+          step={1}
+          value={this.state.age}
+          minimumValue={18}
+          maximumValue={71}
+          minimumTrackTintColor ="#ff00ff"
+          thumbTintColor ="#ffd700"
+          onValueChange={val => this.setState({ age: val })}
+          onSlidingComplete={val => this.getVal(val)}
+        >
+   
+        </Slider>
+
+      </View>
+    );
+  }
+}
+
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => UselessText);

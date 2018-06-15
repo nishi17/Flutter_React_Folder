@@ -1,0 +1,48 @@
+import React, { Component } from "react";
+import {
+  AppRegistry,
+  SectionList,
+  Text,
+  BackHandler
+} from "react-native";
+
+const overrideRenderItem = ({ item, index, section: { title, data } }) => <Text key={index}>Override{item}</Text>
+
+
+
+export default class UselessText extends Component {
+  constructor(props) {
+    super(props);
+    
+    BackHandler.addEventListener('hardwareBackPress', function() {
+      
+      // it return true at that time it will not work backpress not work
+    
+        return false; 
+     
+    });
+  }
+
+
+  render() {
+
+return(
+<SectionList
+  renderItem={({ item, index, section }) => <Text key={index}>{item}</Text>}
+  renderSectionHeader={({section: {title}}) => (
+    <Text style={{fontWeight: 'bold'}}>{title}</Text>
+  )}
+  sections={[
+    { title: 'Title1', data: [' item1', ' item2'], renderItem: overrideRenderItem },
+    { title: 'Title2', data: ['item3', 'item4'] },
+    { title: 'Title3', data: ['item5', 'item6'] },
+  ]}
+/>
+);
+
+  }
+}
+
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => UselessText);

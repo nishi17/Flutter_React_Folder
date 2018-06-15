@@ -1,0 +1,46 @@
+import React, { Component } from "react";
+
+import {
+  Text,
+  ToastAndroid,
+  View,
+  ViewPagerAndroid,
+  StyleSheet,
+  TextInput
+} from "react-native";
+
+export default class Perceptron extends Component {
+  render() {
+    return (
+      <View style={{ flex: 1, backgroundColor: "#ffff00" }}>
+        <ViewPagerAndroid
+          style={styles.viewPager}
+          initialPage={0}
+          keyboardDismissMode="on-drag"
+          pageMargin={200}
+          peekEnabled={true}
+        >
+          <View style={styles.pageStyle} key="1">
+            <Text>First page</Text>
+          </View>
+          <View style={styles.pageStyle} key="2">
+            <Text>Second page</Text>
+          </View>
+        </ViewPagerAndroid>
+
+        <TextInput style={{ marginTop: 20 }} />
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+  viewPager: {
+    backgroundColor: "#ff0000",
+    height: 200
+  },
+  pageStyle: {
+    alignItems: "center",
+    padding: 20,
+    height: 200
+  }
+});

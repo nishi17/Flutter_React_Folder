@@ -1,0 +1,115 @@
+import React, { Component } from "react";
+import {
+  AppRegistry,
+  Button,
+  View,
+  StyleSheet,
+  Picker,
+  Text,
+  Slider,
+  Switch
+} from "react-native";
+
+export default class UselessText extends Component {
+  onPressLearnMore() {
+    alert("hello ");
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      age: 18,
+      selectOfToggle: false,
+      language: "Java"
+    };
+  }
+  getVal(val) {
+    console.warn(val);
+  }
+  state = {
+    language: "Java"
+  };
+
+  render() {
+    var mess;
+    if (this.state.selectOfToggle) {
+      mess = "true";
+    } else {
+      mess = "false";
+    }
+
+    return (
+      <View style={{ flex: 1 }}>
+        <Picker
+          selectedValue={this.state.language}
+          style={{ height: 50, width: 200 }}
+          // onValueChange={(itemValue, itemIndex) =>
+          //   this.setState({ language: itemValue }) }
+
+          onValueChange={language => this.setState({ language })}
+          mode="dialog"
+          prompt="select"
+        >
+          <Picker.Item label="Java" value="java" />
+          <Picker.Item label="JavaScript" value="JavaScript" />
+        </Picker>
+
+        <Text style={{ margin: 10, fontSize: 40 }}>
+          you select {this.state.language}
+        </Text>
+
+        <Slider
+          style={{ width: 300 }}
+          step={25}
+          value={this.state.age}
+          minimumValue={0}
+          maximumValue={250}
+          minimumTrackTintColor="#ff00ff"
+          thumbTintColor="#ffd700"
+          onValueChange={val => this.setState({ age: val })}
+          onSlidingComplete={val => this.getVal(val)}
+        />
+        <Text style={{ margin: 10, fontSize: 20, alignContent: "center" }}>
+          you select {this.state.age}
+        </Text>
+
+        <Switch
+          onTintColor="#ff0000" // if true then backgrround
+          thumbTintColor="#800080" // round of toggle color
+          tintColor="#ffc0cb" //without select background
+          onValueChange={valueT => this.setState({ selectOfToggle: valueT })}
+          value={this.state.selectOfToggle}
+        />
+        <Text style={{ margin: 10, fontSize: 20, alignContent: "center" }}>
+          you select {mess}
+        </Text>
+
+        <View style={{ width: "100%", position: "absolute", bottom: 0 }}>
+          <Button
+            onPress={this.onPressLearnMore}
+            title="Learn More"
+            color="#841584"
+            accessibilityLabel="Learn more about this purple button"
+          />
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  cointenar: {
+    flex: 1
+  },
+  bottomView: {
+    width: "100%",
+    height: 50,
+    backgroundColor: "#FF9800",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    bottom: 0
+  }
+});
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => UselessText);

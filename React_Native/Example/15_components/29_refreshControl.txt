@@ -1,0 +1,58 @@
+import React, { Component } from "react";
+import { ScrollView, RefreshControl, Text, Image } from "react-native";
+
+export default class PizzaTranslator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      refreshing: false
+    };
+  }
+  _onRefresh() {
+    this.setState({ refreshing: true });
+
+    // var a = this.state.refreshing;
+
+    // console.warn(a);
+
+    // if (a) {
+      this.setState({ refreshing: false });
+    // }
+
+    // fetchData().then(() => {
+    //   this.setState({ refreshing: false });
+    // });
+  }
+
+  render() {
+    return (
+      <ScrollView
+        refreshControl={
+          <RefreshControl
+            refreshing={this.state.refreshing}
+            onRefresh={this._onRefresh.bind(this)}
+          />
+        }
+      >
+        <Image
+          style={{ width: 50, height: 50 }}
+          source={{
+            uri:
+              "https://facebook.github.io/react-native/docs/assets/favicon.png"
+          }}
+        />
+        <Text style={{ fontSize: 96 }}>Scroll me plz</Text>
+
+        <Text style={{ fontSize: 96 }}>If you like</Text>
+
+        <Text style={{ fontSize: 96 }}>Scrolling down</Text>
+
+        <Text style={{ fontSize: 96 }}>What's the best</Text>
+
+        <Text style={{ fontSize: 96 }}>Framework around?</Text>
+
+        <Text style={{ fontSize: 80 }}>React Native</Text>
+      </ScrollView>
+    );
+  }
+}

@@ -1,0 +1,29 @@
+import React from "react";
+import { StyleSheet, Text, View, TextInput, Dimensions } from "react-native";
+
+
+
+
+const window = Dimensions.get('window');
+
+let winSize = Dimensions.get('window');
+console.warn(winSize);
+
+export default class App extends React.Component {
+
+
+  render() {
+    return (
+      <View>
+         <View style={{ flex: 1}}>
+        <Text style={{ fontSize: 48}}>fontScale is {window.fontScale}</Text>
+        <Text style={{ fontSize: 48}}>Height is {window.height}</Text>
+        <Text style={{ fontSize: 48}}>scale is {window.scale}</Text>
+        <Text style={{ fontSize: 48}}>width is {window.width}</Text>
+      </View>
+      </View>
+    );
+  }
+}
+
+

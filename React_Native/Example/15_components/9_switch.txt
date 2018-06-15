@@ -1,0 +1,54 @@
+import React, { Component } from "react";
+import {
+  AppRegistry,
+  View,
+  Switch,
+Text
+} from "react-native";
+
+export default class UselessText extends Component {
+
+
+  constructor(props) {
+    super(props);
+    this.state = {
+   
+      selectOfToggle: false,
+      
+    };
+  }
+ 
+  render() {
+
+
+var mess;
+    if (this.state.selectOfToggle) {
+      mess = "true";
+    } else {
+      mess = "false";
+    }
+
+    return (
+      <View style={{ flex: 1 }}>
+
+
+        <Switch
+          onTintColor="#ff0000" // if true then backgrround
+          thumbTintColor="#800080" // round of toggle color
+          tintColor="#ffc0cb" //without select background
+          onValueChange={valueT => this.setState({ selectOfToggle: valueT })}
+          value={this.state.selectOfToggle}
+        />
+        <Text style={{ margin: 10, fontSize: 20, alignContent: "center" }}>
+          you select {mess}
+        </Text>
+
+
+
+      </View>
+    );
+  }
+}
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => UselessText);

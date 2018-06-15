@@ -70,5 +70,14 @@ reasponder system for TOUCh
   https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
   
   
+      *********************           14-6-2018                   ********************************** 
+
   
+  navighator and toolbar
+  http://codingmiles.com/react-native-creating-a-navigation-toolbar-for-android/
+
   
+  Animation Diff Types
+  
+  https://github.com/react-native-training/react-native-animations/tree/animated-timing
+  https://rangle-io.gitbooks.io/react-native-workshop/content/book/animation/animated/timing-spring-decay.html

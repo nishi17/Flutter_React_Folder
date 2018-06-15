@@ -1,0 +1,65 @@
+import React, { Component } from "react";
+import {
+  AppRegistry,
+  Text,
+  TouchableOpacity,
+  View,
+  ToastAndroid
+} from "react-native";
+
+export default class UselessText extends Component {
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <TouchableOpacity
+          onPress={() =>
+            ToastAndroid.show(
+              "This is a toast with short duration",
+              ToastAndroid.SHORT
+            )
+          }
+        >
+          <Text> click me </Text>
+        </TouchableOpacity>
+
+
+
+   <TouchableOpacity
+          onPress={() =>
+            ToastAndroid.showWithGravity(
+              'All Your Base Are Belong To Us',
+              ToastAndroid.SHORT,
+              ToastAndroid.CENTER
+            )
+          }
+        >
+          <Text  style={
+            {margin: 10, fontSize:30}
+          }> click me </Text>
+        </TouchableOpacity>
+
+
+
+   <TouchableOpacity
+          onPress={() =>
+            ToastAndroid.showWithGravityAndOffset(
+              'A wild toast appeared!',
+              ToastAndroid.LONG,
+              ToastAndroid.BOTTOM,
+              25,
+              50
+            )
+          }
+        >
+          <Text  style={
+            {margin: 10, fontSize:30}
+          }> click me </Text>
+        </TouchableOpacity>
+
+      </View>
+    );
+  }
+}
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => UselessText);

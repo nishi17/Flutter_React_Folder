@@ -1,0 +1,63 @@
+import React, { Component } from "react";
+
+import { ToastAndroid, View, ToolbarAndroid, StyleSheet } from "react-native";
+
+export default class Perceptron extends Component {
+  onActionSelected(position) {
+    console.warn(position);
+    if (position === 0) {
+      // index of 'Settings'
+      // showSettings();
+    }
+     ToastAndroid.show("positin " + position, ToastAndroid.SHORT);
+  }
+
+  _onCionClick() {
+   // alert("click click")
+     ToastAndroid.show("click click", ToastAndroid.SHORT);
+  }
+
+  render() {
+    return (
+      <View>
+        <ToolbarAndroid
+          //overflowIcon ={require("./images/screen.png")}
+          actions={[
+            {
+              title: "Settings",
+              icon: require("./images/icon_settings.png"),
+              show: "never"
+            },
+            {
+              title: "Settings1",
+              icon: require("./images/icon_settings.png"),
+              show: "never"
+            },
+            {
+              title: "Settings",
+              icon: require("./images/icon_settings.png"),
+              show: "always"
+            }
+          ]}
+          contentInsetStart={100} // it start with the space including logo not for nav icon
+          contentInsetEnd ={100} // it start after actions icon then it starts to give space
+          style={styles.toolbar}
+          navIcon={require("./images/app_logo.png")}
+          logo={require("./images/app_logo.png")}
+          onIconClicked={this._onCionClick}
+          title="AwesomeApp"
+          subtitle = "toolbar"
+          titleColor = "#00FF64"
+          subtitleColor ="#FF00FF"
+          onActionSelected={this.onActionSelected}
+        />
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+  toolbar: {
+    backgroundColor: "#00a2ed",
+    height: 56
+  }
+});

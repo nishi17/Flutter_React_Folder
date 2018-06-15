@@ -1,0 +1,66 @@
+https://www.npmjs.com/package/react-native-camera
+
+
+Only for POP up
+ install npm library
+npm install react-native-camera --save
+
+
+and run 
+
+
+only
+
+1) single permission..................................................
+ async function requestCameraPermission() {
+  try {
+    const granted = await PermissionsAndroid.request(
+      PermissionsAndroid.PERMISSIONS.CAMERA,
+      {
+        title: "Cool Photo App Camera Permission",
+        message:
+          "Cool Photo App needs access to your camera " +
+          "so you can take awesome pictures."
+      }
+    );
+    if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+      console.warn("You can use the camera");
+    } else {
+      console.warn("Camera permission denied");
+    }
+  } catch (err) {
+    console.warn(err);
+  }
+} 
+
+
+2)multiple permission ...................................
+
+
+async function requestCameraANDSroragePermission() {
+  try {
+    const granted = await PermissionsAndroid.requestMultiple([
+      PermissionsAndroid.PERMISSIONS.CAMERA,
+      PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE
+    ]);
+    if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+      console.warn("You can use the camera");
+    } else {
+      console.warn("Camera permission denied");
+    }
+  } catch (err) {
+    console.warn(err);
+  }
+}
+
+
+
+
+
+call this function from the constructor
+
+and in android manifest put
+
+       <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
