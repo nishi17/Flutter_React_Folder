@@ -1,0 +1,53 @@
+import React, { Component } from "react";
+import { View, Image } from "react-native";
+
+import HomeScreen from "./screen/HomeScreen";
+import ProfileScreen from "./screen/ProfileScreen";
+import Banana from "./Banana";
+
+import { StackNavigator } from "react-navigation";
+
+const App = StackNavigator({
+  Home: { screen: HomeScreen },
+  Profile: { screen: ProfileScreen },
+  Banana: Banana
+});
+
+export default class MyWeb extends Component {
+  render() {
+    return (
+      <View>
+        <Image source={require("./images/bidRattingStar.png")} />
+        <Image
+          source={{ uri: "ic_launcher" }}
+          style={{ width: 40, height: 40 }}
+        />
+        <Image
+          source={{
+            uri: "https://facebook.github.io/react/logo-og.png",
+            method: "POST",
+            headers: {
+              Pragma: "no-cache"
+            },
+            body: "Your Body goes here"
+          }}
+          style={{ width: 200, height: 200 }}
+        />
+        {/* This is recommended for very small and dynamic images only, like icons
+        in a list from a DB. */}
+        <Image
+          style={{
+            width: 51,
+            height: 51,
+            marginTop: 20,
+            resizeMode: Image.resizeMode.contain
+          }}
+          source={{
+            uri:
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=="
+          }}
+        />
+      </View>
+    );
+  }
+}

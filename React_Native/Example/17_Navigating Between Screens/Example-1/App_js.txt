@@ -1,0 +1,28 @@
+import React, { Component } from "react";
+import HomeScreen from  './screen/HomeScreen';
+import ProfileScreen from  './screen/ProfileScreen';
+import Banana from './Banana';
+
+import {
+  StackNavigator,
+} from 'react-navigation';
+
+const App = StackNavigator({
+  Home: { screen: HomeScreen },
+  Profile: { screen: ProfileScreen },
+  Banana : Banana
+});
+
+
+
+
+
+export default class MyWeb extends Component {
+  render() {
+    return (
+      <App/>
+    );
+  }
+}
+
+

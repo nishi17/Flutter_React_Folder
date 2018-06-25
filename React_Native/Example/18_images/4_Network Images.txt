@@ -1,0 +1,6 @@
+// GOOD
+<Image source={{uri: 'https://facebook.github.io/react/logo-og.png'}}
+       style={{width: 400, height: 400}} />
+
+// BAD
+<Image source={{uri: 'https://facebook.github.io/react/logo-og.png'}} />

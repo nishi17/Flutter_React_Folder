@@ -1,0 +1,16 @@
+// include at least width and height!
+//This is recommended for very small and dynamic images only, like icons in a list from a DB.
+//Sometimes, you might be getting encoded image data from a REST API call. You can use the 'data:' uri scheme to use these images.
+// Same as for network resources, you will need to manually specify the dimensions of your image.
+
+<Image
+  style={{
+    width: 51,
+    height: 51,
+    resizeMode: Image.resizeMode.contain,
+  }}
+  source={{
+    uri:
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
+  }}
+/>

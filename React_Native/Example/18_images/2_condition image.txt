@@ -1,0 +1,4 @@
+var icon = this.props.active
+  ? require('./my-icon-active.png')
+  : require('./my-icon-inactive.png');
+<Image source={icon} />;

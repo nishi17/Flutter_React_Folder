@@ -1,0 +1,49 @@
+    ---- EXAMPLE  1 ---
+
+import {Platform, StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  height: Platform.OS === 'ios' ? 200 : 100,
+});
+
+
+    ---- EXAMPLE 2 ----
+
+import React, { Component } from "react";
+import { Text, Platform, StyleSheet } from "react-native";
+
+export default class MyWeb extends Component {
+  render() {
+    return (
+      <Text
+        style={styles.container} 
+   />
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex : 1,
+    height: Platform.OS === "ios" ? 200 : 100,
+    ...Platform.select({
+      ios: {
+        backgroundColor: "red"
+      },
+      android: {
+        backgroundColor: "blue"
+      }
+    })
+  }
+});
+
+
+
+	---- EXAMPLE 3 ----
+
+const Component = Platform.select({
+  ios: () => require('ComponentIOS'),
+  android: () => require('ComponentAndroid'),
+})();
+
+<Component />;

@@ -1,0 +1,12 @@
+Make sure all interactive elements are 44x44 or larger.
+ One way to do this is to leave enough space for the element, padding,
+ minWidth and minHeight style values can be useful for that. Alternatively,
+ you can use hitSlop prop to increase interactive area withoust affecting the layout. 
+
+
+
+ <TouchableOpacity
+          hitSlop={{ top: 20, bottom: 20, left: 150, right: 50 }}
+        >
+          <Button title="sign in "> </Button>
+        </TouchableOpacity>

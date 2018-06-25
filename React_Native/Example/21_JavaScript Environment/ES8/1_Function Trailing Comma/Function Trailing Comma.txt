@@ -1,0 +1,30 @@
+function f(a, b, c,) { }
+
+
+scenarios that arise where function calls and definitions are split across multiple lines in the style of:
+
+ 1: function clownPuppiesEverywhere(
+ 2:   param1,
+ 3:   param2
+ 4: ) { /* ... */ }
+ 5: 
+ 6: clownPuppiesEverywhere(
+ 7:   'foo',
+ 8:   'bar'
+ 9: );
+
+
+ when some other code contributor comes along and adds another parameter to one of these parameter lists, 
+they must make two line updates:
+
+ 1: function clownPuppiesEverywhere(
+ 2:   param1,
+ 3:   param2, // updated to add a comma
+ 4:   param3  // updated to add new parameter
+ 5: ) { /* ... */ }
+ 6: 
+ 7: clownPuppiesEverywhere(
+ 8:   'foo',
+ 9:   'bar', // updated to add a comma
+10:   'baz'  // updated to add new parameter
+11: );

@@ -1,0 +1,5 @@
+return (
+  <ImageBackground source={...}>
+    <Text>Inside</Text>
+  </ImageBackground>
+);

@@ -1,0 +1,26 @@
+ 1 ) Focus the first field automatically  ------- > autoFocus={true}
+ 2 ) Use placeholder text as an example of expected data format  ------- >  placeholder='Enter Email'
+ 3 ) Enable or disable autocapitalization and autocorrect  ------- > autoCapitalize='words' autoCorrect = {true}
+ 4 ) Choose keyboard type (e.g. email, numeric)  ------- >          keyboardType ="email-address"
+
+ 5 ) Make sure the return button focuses the next field or submits the form       ------- >        returnKeyType ='send'
+
+
+  render() {
+    return (
+      <View>
+        <TextInput
+          autoFocus={true}
+          placeholder="Enter Email"
+          autoCapitalize="words"
+          autoCorrect={true}
+          keyboardType ="email-address"
+          style={{ fontSize: 30 }}
+          returnKeyType ='send'
+        /> 
+
+        <Button onPress= {this._onPress }  title="sign in "> </Button>
+      </View>
+    );
+  }
+}

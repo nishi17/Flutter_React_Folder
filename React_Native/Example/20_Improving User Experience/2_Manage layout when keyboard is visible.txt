@@ -1,0 +1,1 @@
+ If you have interactive elements that can get covered by the keyboard, make sure they are still accessible by using the KeyboardAvoidingView component.

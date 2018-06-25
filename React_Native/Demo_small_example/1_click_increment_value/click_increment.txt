@@ -1,0 +1,66 @@
+//  _onPress = () => THIS IS MOST IMPORTANT TO RETURNM A VALUE inshort For Return something from the method need to () =>
+
+
+import React, { Component } from "react";
+import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
+
+export default class App extends Component {
+  state = {
+    count: 0
+  };
+
+  _onPress = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+_onClick = () => {
+
+    if (this.state.count <= 0) {
+      this.setState({ count: this.state.count  });
+    } else {
+      this.setState({ count: this.state.count - 1 });
+    }
+  };
+
+
+  render() {
+    return (
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity onPress={this._onPress}>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Press me!</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this._onClick}>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>click me!</Text>
+          </View>
+        </TouchableOpacity>
+        <Text style={styles.text}> {this.state.count} </Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff"
+  },
+  buttonContainer: {
+    margin: 24
+  },
+  text: {
+    fontSize: 50,
+    color: "#000",
+    fontWeight: "bold"
+  },
+  button: {
+    padding: 25,
+    borderRadius: 5,
+    backgroundColor: "#FFFF0F",
+    marginBottom: 30
+  }
+});

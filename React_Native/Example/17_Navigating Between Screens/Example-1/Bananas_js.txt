@@ -1,0 +1,18 @@
+import React, { Component } from "react";
+import { Image } from "react-native";
+
+export default class Bananas extends Component {
+
+  static navigationOptions = {
+    title: "Welcome BananasScreen"
+  }; 
+
+  render() {
+    let pic = {
+      uri:
+        "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg"
+    };
+
+    return <Image source= {pic} style={{ width: 400, height: 400 }} />;
+  }
+}

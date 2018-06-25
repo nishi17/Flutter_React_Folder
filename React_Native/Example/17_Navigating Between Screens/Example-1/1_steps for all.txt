@@ -1,0 +1,6 @@
+Create screen folder in that 2 file HOMESCREEN  and PROFILESCREEN ..
+BANANAS is out of folder 
+for this see import diff in App.js 
+
+
+Dont forget to write export default HomeScreen and  export default ProfileScreen respectively  files

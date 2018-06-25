@@ -1,0 +1,5 @@
+https://material.io/
+https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/
+
+
+are great resources for learning more about designing for mobile platforms.
